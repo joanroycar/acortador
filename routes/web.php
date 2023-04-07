@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ShortLinkController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +29,4 @@ Route::middleware([
 });
 
 
-Route::get('/{shortLink}',function($shortLink){
-
-})->name('shortLink.show');
+Route::get('/{shortLink}',[ShortLinkController::class,'index'])->name('shortLink.show');

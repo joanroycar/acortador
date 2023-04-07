@@ -62,6 +62,22 @@
 
         </div>
 
+        <div>
+            <h2 class="text-lg font-semibold"> QR CODE</h2>
+        </div>
+        <div class="flex">
+            {!! QrCode::size(100)->generate(route('shortLink.show',$shortLink->slug)); !!}
+
+
+            <x-button class="ml-4" wire:click="downloadQR">
+
+                <i class="fa-solid fa-download mr-2"></i>Descargar
+
+
+            </x-button>
+
+        </div>
+
         
     </div>
     
